@@ -49,7 +49,6 @@ function handlerAdd(name, prix, nb) {
     })
     .then((dataJSON) => {
       console.log(dataJSON);
-      getListeLivre();
     })
     .catch((error) => console.log(error));
 }

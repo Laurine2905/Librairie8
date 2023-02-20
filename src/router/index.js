@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Livre2 from "../components/Livre2.vue";
+import Livre from "../components/Livre.vue";
 import LivreAdd from "../components/LivreAdd.vue";
 import LivreDelete from "../components/LivreDelete.vue";
 import LivreStock from "../components/LivreStock.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
       name: "home",
-      component: Livre2
+      component: Livre
     },
     {
       path: "/add",

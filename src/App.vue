@@ -9,7 +9,6 @@ import Burger from "./components/Burger.vue";
 <template>
   <div>
     <Burger />
-    <Livre />
   </div>
 </template>
 
