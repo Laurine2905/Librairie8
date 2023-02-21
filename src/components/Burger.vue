@@ -51,7 +51,6 @@ body {
   font-family: "Arial";
   font-size: 1em;
   text-align: left;
-  background-image: url("../image/librairie.jpg");
 }
 h1 {
   text-transform: uppercase;
@@ -60,6 +59,9 @@ h1 {
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: white;
 }
 
 /* Sidenav menu */

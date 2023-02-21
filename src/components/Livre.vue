@@ -102,6 +102,39 @@ onMounted(() => {
 </template>
 
 <style scoped>
+h3 {
+  font-size: 1.6em;
+  color: rgb(255, 167, 211);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  background-color: white;
+}
+
+.recherche {
+  margin-left: 32.7%;
+}
+.titre {
+  text-transform: uppercase;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: white;
+}
+ul {
+  font-family: "Arial";
+  font-size: 1em;
+  text-align: left;
+  margin-right: 48%;
+  background-color: white;
+}
+
 td,
 th {
   border: 1px solid rgb(0, 0, 0);

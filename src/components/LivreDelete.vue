@@ -57,7 +57,7 @@ onMounted(() => {
   <!-- Pour Afficher le tableau -->
   <div>
     <table>
-      <tr id="titre">
+      <tr id="titre" class="titre">
         <th>Titre</th>
         <th>Prix</th>
         <th>Quantité en stock</th>
@@ -89,14 +89,16 @@ h3 {
   text-align: center;
 }
 
-tr.titre {
-  text-transform: capitalize;
+.titre {
+  text-transform: uppercase;
 }
+
 table {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  text-transform: lowercase;
+  text-transform: capitalize;
+  background-color: white;
 }
 td,
 th {

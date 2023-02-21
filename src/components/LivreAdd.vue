@@ -59,7 +59,7 @@ function handlerAdd(name, prix, nb) {
   <!-- Pour Afficher le tableau -->
   <div>
     <table>
-      <tr id="titre">
+      <tr id="titre" class="titre">
         <th>Titre</th>
         <th>Prix</th>
         <th>Quantité en stock</th>
