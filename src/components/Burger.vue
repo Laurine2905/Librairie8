@@ -51,6 +51,7 @@ body {
   font-family: "Arial";
   font-size: 1em;
   text-align: left;
+  background-image: url("../images/librairie.jpg");
 }
 h1 {
   text-transform: uppercase;
