@@ -7,9 +7,6 @@ import Chose from "../Chose";
 // --> donnée réactive = l'affichage sera actualisée automatiquement à chque changement dans la liste
 const listeC = reactive([]);
 
-// Afficher la liste lorsqu'on clique sur notre collection
-//document.getElementById("collection").addEventListener("click", getListeLivre);
-
 // la fonction qui récupère les livres et les affiche
 function getListeLivre() {
   //url de l'api pour récupérer les livres
@@ -32,7 +29,7 @@ function getListeLivre() {
     // gestion des erreurs
     .catch((error) => console.log(error));
 }
-
+// la fonction affiche les livres vérifiant le critère de recherche
 // la fonction affiche les livres vérifiant le critère de recherche
 function rechercherLivre(search) {
   console.log(search);
@@ -57,7 +54,6 @@ function rechercherLivre(search) {
     })
     .catch((error) => console.log(error));
 }
-
 // permet d'actualiser la page en réafichant la liste
 onMounted(() => {
   getListeLivre();
@@ -89,62 +85,23 @@ onMounted(() => {
       </tr>
     </table>
   </div>
-
   <!-- On met un input pour la recherche-->
-  <div id="search" class="search">
+  <div id="search" class="recherche">
     <input
       type="text"
       id="nom"
-      v-model="search"
+      v-model="recherche"
       placeholder="Nom du livre"
       class="inputsearch"
     />
     <!-- Lorsqu'on click sur le bouton on lance la fonction search avec l'element recupére dans le input-->
-    <button @click="rechercherLivre(search)" class="buttonsearch">
-      Rechercher
-    </button>
+    <button @click="rechercherLivre(recherche)">Rechercher</button>
+
     <ul id="liste2"></ul>
   </div>
 </template>
 
 <style scoped>
-.inputsearch {
-  padding-right: 10%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.buttonsearch {
-  background-color: rgb(255, 167, 211);
-  margin-right: 20%;
-}
-
-.search {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h3 {
-  font-size: 2em;
-  color: rgb(255, 167, 211);
-  padding-top: 0px;
-  padding-bottom: 0px;
-  text-align: center;
-}
-
-.titre {
-  text-transform: uppercase;
-}
-
-table {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  text-transform: capitalize;
-  background-color: white;
-}
 td,
 th {
   border: 1px solid rgb(0, 0, 0);

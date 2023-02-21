@@ -24,12 +24,6 @@ export default {
       <div id="mySidenav" class="sidenav">
         <a id="closeBtn" href="#" class="close" @click="closeNav">&times;</a>
         <ul>
-          <!-- Revoir les boutons
-            <li><a href="#" id="collection">Notre collection</a></li>
-            <li><a href="#" id="addbook">Ajouter un livre</a></li>
-            <li><a href="#" id="deletebook">Supprimer un livre</a></li>
-            <li><a href="#" id="modifstock">Modifier le stock</a></li>
-            -->
           <RouterLink to="/">Notre collection</RouterLink>
           <RouterLink to="/add">Ajouter un livre</RouterLink>
           <RouterLink to="/delete">Supprimer un livre</RouterLink>
@@ -47,7 +41,7 @@ export default {
       <h1>Ma Petite Librairie</h1>
     </div>
     <!-- Image a rajouter
-    <img src="../assets/librairie.jpg" alt="tour" />
+    <img src="../image/librairie.jpg" alt="tour" />
   --></body>
   <router-view></router-view>
 </template>
@@ -57,9 +51,7 @@ body {
   font-family: "Arial";
   font-size: 1em;
   text-align: left;
-
   background-image: url("../image/librairie.jpg");
-  background-repeat: repeat;
 }
 h1 {
   text-transform: uppercase;

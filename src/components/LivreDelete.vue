@@ -1,22 +1,16 @@
 <script setup>
 import { reactive, onMounted } from "vue";
-
 // -- la classe Chose
 import Chose from "../Chose";
-// -- le sous composants utilisés
 
-// -- la liste des choses --> dans le state
-// --> donnée réactive = l'affichage sera actualisée
-//      automatiquement à chque cght dans la liste
+// --> donnée réactive = l'affichage sera actualisée automatiquement à chque cght dans la liste
 const listeC = reactive([]);
 //url de l'api pour récupérer les livres
 const url = "https://webmmi.iut-tlse3.fr/~pecatte/librairies/public/31/livres";
 
-// Afficher le contenu de la librairie
-// ======> la fonction qui récupère les livres et les affiche
+// La fonction qui récupère les livres et les affiche
 function getListeLivre() {
   let fetchOptions = { method: "GET" }; // On utilise GET pour récupéré les infos ici le titre de chaque livre
-
   fetch(url, fetchOptions)
     .then((response) => {
       console.log("testget");
@@ -32,12 +26,8 @@ function getListeLivre() {
     // gestion des erreurs
     .catch((error) => console.log(error));
 }
-// permet d'actualiser la page en réafichant la liste
-onMounted(() => {
-  getListeLivre();
-});
 
-// SUpprimer un livre
+// Sipprimer un livre
 function handlerDelete(id) {
   console.log(id);
   // On utilise la méthode delete
@@ -55,6 +45,11 @@ function handlerDelete(id) {
     })
     .catch((error) => console.log(error));
 }
+
+// permet d'actualiser la page en réafichant la liste
+onMounted(() => {
+  getListeLivre();
+});
 </script>
 
 <template>
