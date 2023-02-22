@@ -82,11 +82,14 @@ onMounted(() => {
 
 <style scoped>
 h3 {
-  font-size: 2em;
+  font-size: 1.6em;
   color: rgb(255, 167, 211);
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  background-color: white;
 }
 
 .titre {
